@@ -1,4 +1,4 @@
-BEGIN
+BEGIN;
 
 DROP TABLE IF EXISTS facts CASCADE;
 
@@ -9,6 +9,6 @@ CREATE TABLE facts (
   answer BOOLEAN
 );
 
-INSERT INTO facts VALUES ( 'sarah', 'I had a sixth finger', false)
+INSERT INTO facts VALUES ( 'sarah', 'I had a sixth finger', false);
 
 COMMIT;
