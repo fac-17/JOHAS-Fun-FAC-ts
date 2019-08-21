@@ -2,7 +2,7 @@ const fs = require('fs');
 const connection = require('./connection');
 const sql = fs.readFileSync(`${__dirname}/build.sql`).toString();
 
-const builDatabase = () => {
+const buildDatabase = () => {
   connection.query(sql, (err, res) => {
     if(err) {
       console.log(err, 'error')
@@ -15,6 +15,6 @@ const builDatabase = () => {
   })
 }
 
-builDatabase();
+buildDatabase();
 
-module.exports = builDatabase;
+module.exports = buildDatabase;
