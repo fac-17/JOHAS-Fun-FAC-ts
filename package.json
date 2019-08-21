@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "tape"\""
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fac-17/JOHAS-Fun-FAC-ts.git"
@@ -18,6 +16,8 @@
   },
   "homepage": "https://github.com/fac-17/JOHAS-Fun-FAC-ts#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
     "tape": "^4.11.0"
   },
   "devDependencies": {
