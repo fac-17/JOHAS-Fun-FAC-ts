@@ -77,3 +77,98 @@
 footer {
   font-family: "Abel", sans-serif;
 }
+
+/* above: Colette's
+below: Martha's */
+
+body {
+  font-family: "Abel", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.score-container {
+  background-color: black;
+  padding-bottom: 1em;
+  height: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.score {
+  background-color: black;
+  color: white;
+  margin-right: 2em;
+  padding: 1em;
+  border: solid #3fff00 2px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.game-list {
+  margin: 0;
+  background-color: black;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+}
+
+.list-items {
+  border: solid #3fff00 2px;
+  padding: 2em;
+  display: grid;
+  grid-row-gap: 2em;
+  grid-column-gap: 5%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.author {
+  color: #3fff00;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-family: "VT323", monospace;
+  font-size: 2em;
+}
+
+.statement {
+  color: white;
+  grid-column-start: 3;
+  grid-column-end: 8;
+  font-size: 1.5em;
+}
+
+.button-true {
+  background-color: white;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-size: 1em;
+}
+
+.button-true:hover {
+  background-color: #3fff00;
+  transform: translateY(-3px);
+}
+.button-true:focus {
+  background-color: #3fff00;
+}
+
+.button-false {
+  background-color: white;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-size: 1em;
+}
+.button-false:hover {
+  transform: translateY(-3px);
+  background-color: #ec040d;
+}
+.button-false:focus {
+  background-color: #ec040d;
+}
