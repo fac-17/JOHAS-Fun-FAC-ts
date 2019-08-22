@@ -10,6 +10,6 @@ CREATE TABLE facts (
 );
 
 
-INSERT INTO facts (author, statement, answer) VALUES ( 'sarah', 'I had a sixth finger', false);
+INSERT INTO facts (author, statement, answer) VALUES ( 'Sarah', 'I had a sixth finger', false), ( 'Tony', 'I have Heterochromia', false), ('Martha', 'I have Tryphobia', true), ('Sam', 'I was arrested in Paraguay', true), ('Colette', 'I once had dinner with Cher', false), ('Colette', 'I can"t swim', true), ('Sarah', 'I can"t ride a bike', false);
 
 COMMIT;
