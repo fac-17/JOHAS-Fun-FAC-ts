@@ -1,0 +1,79 @@
+* {
+  background-color: black;
+  color: white;
+  /* font-family: "Abel", sans-serif; */
+}
+
+.main__header {
+  background-color: #3fff00;
+  height: 30vh;
+  /* margin-top: 15vh; */
+  font-family: "VT323", monospace;
+  display: flex;
+  justify-content: center;
+}
+
+.main__header h1 {
+  font-size: 6rem;
+}
+
+.main__container {
+  height: 60vh;
+  font-family: "Abel", sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+
+/* .about {
+  display: flex;
+  justify-content: center;
+} */
+
+.main__container p {
+  display: flex;
+  justify-content: center;
+}
+
+.main__container a {
+  color: inherit;
+  font-size: 4rem;
+  color: #3fff00;
+  text-decoration: none;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+}
+
+#buttons p {
+  padding: 2rem;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.buttons-subcategory {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  padding: 3.5rem;
+}
+
+.buttons-subcategory a {
+  /* padding-left: 3rem; */
+  display: flex;
+  justify-content: center;
+}
+
+.buttons-subcategory p {
+  /* padding-left: 3rem; */
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  font-family: "Abel", sans-serif;
+}
