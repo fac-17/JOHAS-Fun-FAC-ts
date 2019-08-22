@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
   res.render("home");
 });
 
-router.get("/makeStatement", (req, res) => {
+router.get("/statement", (req, res) => {
   res.render("makeStatement");
 });
 
