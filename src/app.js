@@ -4,7 +4,7 @@ const path = require("path");
 // const favicon = require('serve-favicon');
 const expressHandlebars = require("express-handlebars");
 const controllers = require("./controllers/index");
-const helpers = require("./views/helpers");
+// const helpers = require("./views/helpers");
 
 const app = express();
 
@@ -23,7 +23,7 @@ app.engine(
   })
 );
 
-app.use(express.static(path.join(__dirname, '..', 'public')))
-app.use(controllers)
+app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(controllers);
 
 module.exports = app;

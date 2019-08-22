@@ -5,17 +5,20 @@ const router = express.Router()
 // const makeStatement = require('./makeStatement')
 // const makeGuess = require('./makeGuess')
 const error = require('./error')
+const statementList = require('./statementList');
 
 
 router.get("/", (req, res) => {
   res.render("home");
 });
 
-router.get("/makeStatement", (req, res) => {
-  res.render("makeStatement")
+router.get("/statement", (req, res) => {
+  res.render("makeStatement");
 });
 
-router.use(error.client)
-router.use(error.server)
+router.get("/game", statementList.statements);
+
+router.use(error.client);
+router.use(error.server);
 
 module.exports = router;
