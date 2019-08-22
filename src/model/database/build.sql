@@ -9,10 +9,6 @@ CREATE TABLE facts (
   answer BOOLEAN
 );
 
-<<<<<<< HEAD
-INSERT INTO facts (author, statement, answer) VALUES ( 'sarah', 'I had a sixth finger', false);
-=======
 INSERT INTO facts VALUES ( 'sarah', 'I had a sixth finger', false);
->>>>>>> master
 
 COMMIT;

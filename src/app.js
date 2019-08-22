@@ -3,13 +3,12 @@ const express = require("express");
 const path = require("path");
 // const favicon = require('serve-favicon');
 const expressHandlebars = require("express-handlebars");
-const controllers = require("./controllers");
+const controllers = require("./controllers/index");
 const helpers = require("./views/helpers");
 
 const app = express();
 
 app.set("port", process.env.PORT || 3000);
-// app.use(controllers);
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
@@ -24,12 +23,7 @@ app.engine(
   })
 );
 
-app.get("/", (req, res) => {
-  res.render("home");
-});
-
-app.get("/statement", (req, res) => {
-  res.render("makeStatement")
-});
+app.use(express.static(path.join(__dirname, '..', 'public')))
+app.use(controllers)
 
 module.exports = app;
