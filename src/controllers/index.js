@@ -15,6 +15,10 @@ router.get("/makeStatement", (req, res) => {
   res.render("makeStatement")
 });
 
+router.get("/game", (req, res) => {
+  res.render("game")
+});
+
 router.use(error.client)
 router.use(error.server)
 
