@@ -1,16 +1,20 @@
 const { Pool } = require('pg');
 const url = require('url');
 let DATABASE_URL = process.env.DATABASE_URL;
+require('dotenv').config();
 
-if(process.env.NODE_ENV !== "production"){
-  require("dotenv").config();
-};
+// if(process.env.NODE_ENV !== "production"){
+//
+// };
 
 if(process.env.NODE_ENV === "test") {
+  console.log('This is a test')
   DATABASE_URL = process.env.TEST_URL;
+  console.log('The db url is', DATABASE_URL)
 };
 
 if(!process.env.DATABASE_URL){
+  console.log('This is an error')
   throw new Error("Environment variable DATABASE_URL must be set");
 };
 
