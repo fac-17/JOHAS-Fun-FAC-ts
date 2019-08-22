@@ -27,11 +27,15 @@ test("Test that getData function returns info", t => {
 test("Test that postStatment updates database", t => {
   buildDatabase((err, res) => {
     t.error(err, "No error");
-    let expected = {};
+    let expected = 2;
     queries.postStatement((err, result) => {
       if (err) console.log(err);
-      t.deepEqual(result[0], expected, "Updates facts table");
-      t.end();
+
+      queries.getData((err, result) => {
+        if (err) console.log(err);
+        t.deepEqual(result.length, expected, "Updates facts table");
+        t.end();
+      });
     });
   });
 });
