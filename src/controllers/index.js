@@ -20,17 +20,17 @@ router.get("/statement", (req, res) => {
 router.get("/game", statementList.statements);
 
 router.post("/submit_statement", (req, res) => {
-  //res.render("home");
+  res.send("home");
   console.log("the endpoint is", res);
   console.log("the req is", req);
 
-  // queries.postStatement((err, res) => {
-  //   if (err) {
-  //     console.log("i am err", err);
-  //   } else {
-  //     console.log("i am res", res);
-  //   }
-  // });
+  queries.postStatement((err, res) => {
+    if (err) {
+      console.log("i am err", err);
+    } else {
+      console.log("i am res", res);
+    }
+  });
 });
 
 router.use(error.client);
