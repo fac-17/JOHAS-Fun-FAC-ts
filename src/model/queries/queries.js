@@ -10,9 +10,17 @@ const getData = cb => {
   });
 };
 
-const postStatement = cb => {
+const postStatement = (data, cb) => {
+  console.log("running post statement callback");
+  const {
+    name,
+    statement,
+    answer
+  } = data
+
   connection.query(
-    "INSERT INTO facts(author, statement, answer) VALUES('Martha','I wear glasses', true)",
+    "INSERT INTO facts(author, statement, answer) VALUES($1,$2, $3)",
+    [name, statement, answer],
     (err, res) => {
       if (err) {
         cb(err);
@@ -23,4 +31,7 @@ const postStatement = cb => {
   );
 };
 
-module.exports = { getData, postStatement };
+module.exports = {
+  getData,
+  postStatement
+};
