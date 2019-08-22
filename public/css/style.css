@@ -142,6 +142,7 @@ body {
 
 .button-true {
   background-color: white;
+  color: black;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -159,6 +160,7 @@ body {
 
 .button-false {
   background-color: white;
+  color: black;
   grid-column-start: 5;
   grid-column-end: 6;
   grid-row-start: 2;
