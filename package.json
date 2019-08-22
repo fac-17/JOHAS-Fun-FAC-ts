@@ -20,12 +20,15 @@
   },
   "homepage": "https://github.com/fac-17/JOHAS-Fun-FAC-ts#readme",
   "dependencies": {
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "tape": "^4.11.0"
+    "path": "^0.12.7",
+    "pg": "^7.12.1",
+    "url": "^0.11.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1",
-    "tap-spec": "^5.0.0"
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
   }
 }
