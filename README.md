@@ -16,7 +16,7 @@ To run the project on the localhost:3000:
 
 ## DATABASE SCHEMA
 
-#### TABLE(s) -->Facts
+#### Facts
 
 - ID (INTEGER)
 - NAME (VARCHAR)
@@ -33,29 +33,16 @@ To run the project on the localhost:3000:
 
 ## MVP Tasks
 
-- [x] Set up respository (https://github.com/fac-17/JOHAS-Fun-FAC-ts)
-- [x] Set up Heroku
-- [x] Set up file structure in repo
-- [x] Set up Express server: Mob
-- [x] Set up database (Heroku + local test):
-  - [x] .sql --> table
-  - [x] .js --> Build file
-  - [x] .DB connection file
-- [x] Tests for database query
-- [x] Database Get data querys
-- [x] FETCH questions from table
-- [x] POST new questions to database
-- [x] Start on views (layouts + partials)
-- [x] Partials
-- [x] Footer
-- [x] Header
-- [x] Views
-- [x] Form to submit question
-- [x] Display question/s
-- [x] Results
-- [x] Leaderboard (Stretch goal)
-- [x] Create controllers
-- [x] Submit button on form to update database
+- [x] File Structure for full stack express handlebars
+- [ ] Testing
+  - [x] Database
+  - [ ] Routes
+  - [ ] Pure Functions
+- [x] Functionality
+  - [x] handlebars to show header and footer, errors etc...
+  - [x] User can add a statement
+  - [x] User can answer true and false statements
+  - [x] User gets a score based on their answers
 - [ ] Style app theme to look like a cool game
   - [x] Fonts, colors
   - [x] Add nicer animations
@@ -67,10 +54,15 @@ To run the project on the localhost:3000:
 
 - [ ] Create table to save each players score
 - [ ] Create page for showing leader board of top scores
-- [ ] Make user logins to track player statements and scores
+- [ ] Make user login to track player statements and scores
 - [ ] Track how many times a question was answered correctly to give it a rank of hardness
 
 ## What we learnt 📖
+
+- Express and handlebars
+- Repeating everything just helps in general
+- Keep track of different CSS pages
+- You can copy someones awesome SASS files into your css by compiling it into CSS first
 
 ## What's Gone Well 🤗
 
