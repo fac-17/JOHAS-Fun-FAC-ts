@@ -9,6 +9,7 @@ CREATE TABLE facts (
   answer BOOLEAN
 );
 
+
 INSERT INTO facts (author, statement, answer) VALUES ( 'sarah', 'I had a sixth finger', false);
 
 COMMIT;

@@ -7,6 +7,7 @@ const router = express.Router();
 // const makeStatement = require('./makeStatement')
 // const makeGuess = require('./makeGuess')
 const error = require("./error");
+const statementList = require("./statementList");
 
 router.get("/", (req, res) => {
   res.render("home");
@@ -15,6 +16,8 @@ router.get("/", (req, res) => {
 router.get("/makeStatement", (req, res) => {
   res.render("makeStatement");
 });
+
+router.get("/game", statementList.statements);
 
 router.post("/submit_statement", (req, res) => {
   //res.render("home");
