@@ -1,4 +1,6 @@
 const express = require('express')
+const queries = require('../model/queries/queries')
+
 const router = express.Router()
 
 // const home = require('./home')
@@ -13,6 +15,19 @@ router.get("/", (req, res) => {
 
 router.get("/makeStatement", (req, res) => {
   res.render("makeStatement")
+});
+
+router.post("/submit_statement", (req, res) => {
+// res.render('home')
+ console.log('the endpoint is', res.body.url)
+
+  queries.postStatement((err, res) => {
+    if(err){
+      console.log('i am err', err)
+    } else {
+      console.log('i am res', res)
+    }
+  })
 });
 
 router.use(error.client)
