@@ -28,4 +28,8 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+app.get("/statement", (req, res) => {
+  res.render("makeStatement")
+});
+
 module.exports = app;
