@@ -1,7 +1,6 @@
 const queries = require("../model/queries/queries");
 
-
-exports.postStatement = ((req, res) => {
+exports.formSubmit = ((req, res) => {
   const data = req.body;
 
   queries.postStatement(data, (error, result) => {

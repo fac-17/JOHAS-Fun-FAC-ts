@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bodyParser = require('body-parser');
-var urlencodedParser = bodyParser.urlencoded({
+const urlencodedParser = bodyParser.urlencoded({
   extended: false
 });
 
@@ -19,7 +19,7 @@ router.get("/statement", (req, res) => {
 
 router.get("/game", statementList.statements);
 
-router.post("/submit_statement", urlencodedParser, postStatement.postStatement);
+router.post("/submit_statement", urlencodedParser, postStatement.formSubmit);
 
 router.use(error.client);
 router.use(error.server);
