@@ -9,6 +9,11 @@ CREATE TABLE facts (
   answer BOOLEAN
 );
 
+<<<<<<< HEAD
 INSERT INTO facts VALUES ( 'sarah', 'I had a sixth finger', false);
+=======
+
+INSERT INTO facts (author, statement, answer) VALUES ( 'sarah', 'I had a sixth finger', false);
+>>>>>>> fc7195a0d640639acc84b6467235c9f0eb12e05c
 
 COMMIT;

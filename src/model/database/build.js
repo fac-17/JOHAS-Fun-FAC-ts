@@ -1,21 +1,14 @@
-const fs = require('fs');
-const connection = require('./connection');
+const fs = require("fs");
+const connection = require("./connection");
 const sql = fs.readFileSync(`${__dirname}/build.sql`).toString();
 
-const buildDatabase = () => {
-  // console.log("hellooo");
-  connection.query(sql, (err, res) => {
-   if(err) {
-     console.log(err, 'error')
-  } else {
-   // console.log('Database created')
-   //  connection.end(() => {
-   //    console.log('Connection closed')
-   //   })
-   console.log(res);
-    }
-   })
-}
+const buildDatabase = cb => {
+  connection.query(sql, cb);
+};
+
+// const runDbBuild = cb => {
+//   dbConnection.query(sql, cb);
+// };
 
 buildDatabase();
 
