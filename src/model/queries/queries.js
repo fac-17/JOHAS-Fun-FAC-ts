@@ -11,7 +11,6 @@ const getData = cb => {
 };
 
 const postStatement = (data, cb) => {
-  console.log("running post statement callback");
   const {
     name,
     statement,

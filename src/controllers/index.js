@@ -1,17 +1,10 @@
 const express = require("express");
-// const queries = require("../model/queries/queries");
-
 const router = express.Router();
-
-
 const bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({
   extended: false
-})
+});
 
-// const home = require('./home')
-// const makeStatement = require('./makeStatement')
-// const makeGuess = require('./makeGuess')
 const error = require("./error");
 const statementList = require("./statementList");
 const postStatement = require("./postStatement");
