@@ -9,14 +9,17 @@ test("Tape is working", t => {
 
 test("Test that getData function returns info", t => {
   buildDatabase((err, res) => {
-    t.error(err, 'No error');
-
-    let expected = { id:1, author: 'sarah', statement:'I had a sixth finger', answer:false};
-
+    t.error(err, "No error");
+    let expected = {
+      id: 1,
+      author: "sarah",
+      statement: "I had a sixth finger",
+      answer: false
+    };
     queries.getData((err, result) => {
-      if(err) console.log(err);
-      t.deepEqual(result, expected, "returns info from database");
+      if (err) console.log(`this is an error with the query`, err);
+      t.deepEqual(result[0], expected, "returns info from database");
       t.end();
-    })
-  })
-})
+    });
+  });
+});

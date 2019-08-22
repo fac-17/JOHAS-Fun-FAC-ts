@@ -1,20 +1,13 @@
-const connection = require('../');
+const connection = require("../database/connection");
 
-
-
-const getData = () => {
-  console.log("GEt data");
-  connection.query('SELECT * FROM facts', (err, res) => {
-    if(err) {
-      cb(err)
+const getData = cb => {
+  connection.query("SELECT * FROM facts", (err, res) => {
+    if (err) {
+      cb(err);
     } else {
       cb(null, res.rows);
-    };
+    }
   });
 };
 
-
-
-
-
-module.exports = {getData};
+module.exports = { getData };
