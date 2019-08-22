@@ -158,7 +158,6 @@ body {
 
 .button-false {
   background-color: white;
-  color: black;
   grid-column-start: 5;
   grid-column-end: 6;
   grid-row-start: 2;
@@ -171,4 +170,8 @@ body {
 }
 .button-false:focus {
   background-color: #ec040d;
+}
+
+.answer {
+  color: #3fff00;
 }
