@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "ahhhh tests",
+    "start": "node src/index.js",
+    "watch": "nodemon src/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fac-17/JOHAS-Fun-FAC-ts.git"
