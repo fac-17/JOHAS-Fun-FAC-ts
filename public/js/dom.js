@@ -33,6 +33,5 @@ falseButtons.forEach((btn, ind) => {
 const icon = document.querySelector("#icon")
 
 icon.addEventListener('click', () => {
-  console.log('trying to spin');
   icon.classList.toggle('spin');
 })
