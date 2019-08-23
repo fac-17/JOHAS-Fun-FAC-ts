@@ -265,6 +265,16 @@ body {
 }
 
 .answer {
+  color: #3fff00;
+  grid-column: 3/span 2;
+  font-size: 2rem;
+  justify-self: center;
+}
+
+footer{
+  font-weight: bold;
+  height:10%;
+  text-align: center;
   color: white;
   font-size: 1.5rem;
 }
