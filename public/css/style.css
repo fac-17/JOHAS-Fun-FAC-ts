@@ -101,6 +101,22 @@ html {
   color: yellow;
 }
 
+#icon {
+  transition-duration: 0.8s;
+  transition-property: transform;
+}
+
+#icon:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform-origin: 40% 40%;
+}
+
+.spin {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform-origin: 40% 40%;
+}
 
 /* .about {
   display: flex;

@@ -2,7 +2,6 @@ const answers = Array.from(document.querySelectorAll(".answer"));
 const trueButtons = Array.from(document.querySelectorAll(".button-true"));
 const falseButtons = Array.from(document.querySelectorAll(".button-false"));
 let scoreContainer = document.querySelector(".score");
-let factsLogo = document.querySelector('#facts-logo');
 let count = 0;
 
 
@@ -30,3 +29,10 @@ falseButtons.forEach((btn, ind) => {
     }
   });
 });
+
+const icon = document.querySelector("#icon")
+
+icon.addEventListener('click', () => {
+  console.log('trying to spin');
+  icon.classList.toggle('spin');
+})
