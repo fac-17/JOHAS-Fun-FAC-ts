@@ -2,7 +2,9 @@ const answers = Array.from(document.querySelectorAll(".answer"));
 const trueButtons = Array.from(document.querySelectorAll(".button-true"));
 const falseButtons = Array.from(document.querySelectorAll(".button-false"));
 let scoreContainer = document.querySelector(".score");
+let factsLogo = document.querySelector('#facts-logo');
 let count = 0;
+
 
 answers.forEach(answer => {
   answer.style.display = "none";
