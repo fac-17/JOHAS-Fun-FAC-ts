@@ -28,3 +28,31 @@ falseButtons.forEach((btn, ind) => {
     }
   });
 });
+
+
+
+
+//Add custom error fields for input
+
+const submit = document.querySelector("#submit");
+
+
+submit.addEventListener('click', () => {
+  const name = document.querySelector('#name');
+  const statement= document.querySelector('#statement');
+
+  console.log(name.validity.valueMissing);
+
+  if(name.validity.valueMissing){
+    name.setCustomValidity('Please enter your name, darling!');
+} else if(!name.validity.valueMissing) {
+ name.setCustomValidity("");
+};
+
+if(statement.validity.valueMissing){
+  statement.setCustomValidity("Fill in your fun FACt, don't be a bore!");
+} else if(!name.validity.valueMissing){
+  statement.setCustomValidity("");
+};
+
+});
