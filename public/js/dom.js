@@ -9,38 +9,84 @@ answers.forEach(answer => {
   answer.style.display = "none";
 });
 
-answerFunction = buttonsArray => {
-  buttonsArray.forEach((btn, ind) => {
-    btn.addEventListener("click", () => {
-      let answerCapital =
-        answers[ind].innerText.charAt(0).toUpperCase() +
-        answers[ind].innerText.slice(1);
+// answerFunction = buttonsArray => {
+//   buttonsArray.forEach((btn, ind) => {
+//     btn.addEventListener("click", () => {
+//       let answerCapital =
+//         answers[ind].innerText.charAt(0).toUpperCase() +
+//         answers[ind].innerText.slice(1);
 
-      answers[ind].style.display = "block";
-      answers[ind].innerText = `Answer is: ${answerCapital}`;
-      if (btn.textContent === "True" && answers[ind].innerText === "true") {
-        count += 1;
-        scoreContainer.textContent = `Score= ${count}`;
-        btn.style.display = "none";
-        falseButtons[ind].style.display = "none";
-      } else if (
-        btn.textContent === "False" &&
-        answers[ind].textContent === "false"
-      ) {
-        count += 1;
-        scoreContainer.textContent = `Score= ${count}`;
-        btn.style.display = "none";
-        trueButtons[ind].style.display = "none";
-      } else {
-        falseButtons[ind].style.display = "none";
-        trueButtons[ind].style.display = "none";
-      }
-    });
+//       answers[ind].style.display = "block";
+//       answers[ind].innerText = `Answer is: ${answerCapital}`;
+
+//       if (
+//         btn.textContent === "True" &&
+//         answers[ind].textContent.includes("True")
+//       ) {
+//         count += 1;
+//         scoreContainer.textContent = `Score= ${count}`;
+//         btn.style.display = "none";
+//         falseButtons[ind].style.display = "none";
+//       } else if (
+//         btn.textContent === "False" &&
+//         answers[ind].textContent.includes("False")
+//       ) {
+//         count += 1;
+//         scoreContainer.textContent = `Score= ${count}`;
+//         btn.style.display = "none";
+//         trueButtons[ind].style.display = "none";
+//       } else {
+//         falseButtons[ind].style.display = "none";
+//         trueButtons[ind].style.display = "none";
+//       }
+//     });
+//   });
+// };
+
+trueButtons.forEach((btn, ind) => {
+  btn.addEventListener("click", () => {
+    let answerCapital =
+      answers[ind].innerText.charAt(0).toUpperCase() +
+      answers[ind].innerText.slice(1);
+
+    answers[ind].style.display = "block";
+    answers[ind].innerText = `Answer is: ${answerCapital}`;
+    console.log(answers[ind].textContent);
+    if (answers[ind].textContent.includes("True")) {
+      count += 1;
+      scoreContainer.textContent = `Score= ${count}`;
+      btn.style.display = "none";
+      falseButtons[ind].style.display = "none";
+    } else {
+      falseButtons[ind].style.display = "none";
+      trueButtons[ind].style.display = "none";
+    }
   });
-};
+});
 
-answerFunction(trueButtons);
-answerFunction(falseButtons);
+falseButtons.forEach((btn, ind) => {
+  btn.addEventListener("click", () => {
+    let answerCapital =
+      answers[ind].innerText.charAt(0).toUpperCase() +
+      answers[ind].innerText.slice(1);
+
+    answers[ind].style.display = "block";
+    answers[ind].innerText = `Answer is: ${answerCapital}`;
+
+    if (answers[ind].textContent === "false") {
+      count += 1;
+      scoreContainer.textContent = `Score= ${count}`;
+      btn.style.display = "none";
+      falseButtons[ind].style.display = "none";
+    } else {
+      falseButtons[ind].style.display = "none";
+      trueButtons[ind].style.display = "none";
+    }
+  });
+});
+
+// answerFunction(trueButtons);
+// answerFunction(falseButtons);
 
 //Add custom error fields for input
 
