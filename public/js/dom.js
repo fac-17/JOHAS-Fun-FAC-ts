@@ -2,6 +2,7 @@ const answers = Array.from(document.querySelectorAll(".answer"));
 const trueButtons = Array.from(document.querySelectorAll(".button-true"));
 const falseButtons = Array.from(document.querySelectorAll(".button-false"));
 let scoreContainer = document.querySelector(".score");
+let factsLogo = document.querySelector("#facts-logo");
 let count = 0;
 
 answers.forEach(answer => {
@@ -31,7 +32,6 @@ answerFunction = buttonsArray => {
         btn.style.display = "none";
         trueButtons[ind].style.display = "none";
       } else {
-        // btn.style.display = "none";
         falseButtons[ind].style.display = "none";
         trueButtons[ind].style.display = "none";
       }
@@ -41,3 +41,24 @@ answerFunction = buttonsArray => {
 
 answerFunction(trueButtons);
 answerFunction(falseButtons);
+
+//Add custom error fields for input
+
+const submit = document.querySelector("#submit");
+
+submit.addEventListener("click", () => {
+  const name = document.querySelector("#name");
+  const statement = document.querySelector("#statement");
+
+  if (name.validity.valueMissing) {
+    name.setCustomValidity("Please enter your name, darling!");
+  } else if (!name.validity.valueMissing) {
+    name.setCustomValidity("");
+  }
+
+  if (statement.validity.valueMissing) {
+    statement.setCustomValidity("Fill in your fun FACt, don't be a bore!");
+  } else if (!name.validity.valueMissing) {
+    statement.setCustomValidity("");
+  }
+});
