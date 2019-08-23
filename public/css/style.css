@@ -93,6 +93,11 @@ html {
   padding: 1rem;
 }
 
+#facts-logo {
+  display: flex;
+  flex-direction: row;
+}
+
 #facts-logo a {
   text-decoration: none;
 }
@@ -102,26 +107,15 @@ html {
 }
 
 #icon {
+  margin-left: 10px;
   transition-duration: 0.8s;
   transition-property: transform;
-}
-
-#icon:hover {
-  transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  transform-origin: 40% 40%;
 }
 
 .spin {
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
-  transform-origin: 40% 40%;
 }
-
-/* .about {
-  display: flex;
-  justify-content: center;
-} */
 
 .main__container p {
   display: flex;
