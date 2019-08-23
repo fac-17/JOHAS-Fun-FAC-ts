@@ -2,7 +2,9 @@ const answers = Array.from(document.querySelectorAll(".answer"));
 const trueButtons = Array.from(document.querySelectorAll(".button-true"));
 const falseButtons = Array.from(document.querySelectorAll(".button-false"));
 let scoreContainer = document.querySelector(".score");
+let factsLogo = document.querySelector('#facts-logo');
 let count = 0;
+
 
 answers.forEach(answer => {
   answer.style.display = "none";
@@ -29,13 +31,9 @@ falseButtons.forEach((btn, ind) => {
   });
 });
 
-
-
-
 //Add custom error fields for input
 
 const submit = document.querySelector("#submit");
-
 
 submit.addEventListener('click', () => {
   const name = document.querySelector('#name');
